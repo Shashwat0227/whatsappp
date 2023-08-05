@@ -1,0 +1,228 @@
+:root {
+  --h-filter-height: 49px;
+  --h-chatbox-footer-height: 62px;
+  --h-chatbox-footer-with-extended-height: 62px;
+}
+body {
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu,
+    Cantarell, Fira Sans, sans-serif;
+  color: var(--primary);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  background-color: var(--app-background);
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-500);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(var(--white-rgb), 0.1);
+}
+
+html[dir="rtl"] #initial_startup .graphic::after {
+  animation-direction: reverse;
+}
+
+/* ---------------------------------------------- */
+/* Whatsapp Loader */
+/* ---------------------------------------------- */
+.spinner-container {
+  animation: rotate 2s linear infinite;
+  -webkit-animation: rotate 2s linear infinite;
+}
+
+.spinner-container .path {
+  stroke-dasharray: 1, 150;
+  /* 1%, 101% circumference */
+  stroke-dashoffset: 0;
+  stroke: rgba(27, 154, 89, 0.7);
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -35;
+    /* 25% circumference */
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -124;
+    /* -99% circumference */
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    /* 1%, 101% circumference */
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -35;
+    /* 25% circumference */
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    /* 70%, 101% circumference */
+    stroke-dashoffset: -124;
+    /* -99% circumference */
+  }
+}
+/* ---------------------------------------------- */
+/* Menu */
+/* ---------------------------------------------- */
+.MuiMenu-paper {
+  padding: 9px 0 !important;
+  background-color: var(--dropdown-background) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 2px 5px 0 rgba(var(--shadow-rgb), 0.26),
+    0 2px 10px 0 rgba(var(--shadow-rgb), 0.16) !important;
+}
+.MuiMenu-paper li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 58px;
+  padding-left: 24px;
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  line-height: 14.5px;
+  color: var(--primary);
+  height: 40px;
+}
+.MuiMenu-paper li:hover {
+  background-color: var(--dropdown-background-hover);
+}
+/* ---------------------------------------------- */
+/* Switch */
+/* ---------------------------------------------- */
+.MuiSwitch-colorPrimary {
+  color: var(--switch-button-color) !important;
+}
+.MuiSwitch-track {
+  background-color: var(--switch-track-color) !important;
+}
+.MuiSwitch-colorPrimary.Mui-checked {
+  color: var(--switch-button-checked-color) !important;
+}
+.Mui-checked + .MuiSwitch-track {
+  background-color: var(--switch-track-checked-color) !important;
+}
+
+/* ---------------------------------------------- */
+/* Dialog */
+/* ---------------------------------------------- */
+.MuiDialog-paper {
+  background-color: var(--modal-background) !important;
+}
+.MuiDialogTitle-root {
+  color: var(--primary) !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+}
+.MuiDialogContentText-root {
+  color: var(--secondary) !important;
+  font-size: 0.875rem !important;
+  font-weight: normal !important;
+  padding-bottom: 12px !important;
+}
+.MuiDialog-root .MuiModal-backdrop {
+  background-color: var(--modal-backdrop) !important;
+}
+.MuiButton-root {
+  background-color: var(--button-secondary-background) !important;
+  color: var(--button-secondary) !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--button-secondary-border) !important;
+  padding: 7px 15px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.MuiButton-root.primary {
+  color: var(--button-primary) !important;
+  background-color: var(--button-primary-background) !important;
+}
+
+/* ---------------------------------------------- */
+/* Dialog */
+/* ---------------------------------------------- */
+.MuiRadio-root {
+  color: var(--switch-button-color) !important;
+}
+.MuiRadio-root.Mui-checked {
+  color: var(--switch-button-checked-color) !important;
+}
+.MuiFormControlLabel-label {
+  color: var(--primary) !important;
+  font-size: 0.87rem !important;
+}
+.report-dialog-wrapper .report-desc {
+  border-bottom: 1px solid var(--border-bubble);
+  margin-bottom: 10px;
+}
+.block-dialog-wrapper .report-desc {
+  padding-left: 26px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-bubble);
+}
+
+/* ---------------------------------------------- */
+/* Checkbox */
+/* ---------------------------------------------- */
+.MuiCheckbox-root {
+  color: var(--primary);
+}
+.MuiCheckbox-root.Mui-checked {
+  color: var(--switch-button-checked-color) !important;
+}
